@@ -1,0 +1,224 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Great Vibes', cursive;
+    background-color: #fff8e1; /* Cream color background */
+    color: #5b5b5b; /* Soft dark color for text */
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+}
+
+/* Header Styles with Background Image */
+header {
+    background: url('background-top.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 5em 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text contrast */
+    z-index: -1;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+
+
+/* Navigation Styles */
+nav {
+    background-color: #decba4; /* Light cream color */
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-top: 2px solid #a68b6a; /* Decorative border at the top */
+    border-bottom: 2px solid #a68b6a; /* Decorative border at the bottom */
+    margin-bottom: 2em;
+}
+
+nav a {
+    margin: 0 1em;
+    color: #5b5b5b; /* Soft dark color for text */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+    padding: 0.5em 1em;
+}
+
+nav a:hover {
+    color: #6b4e24; /* Darker shade for hover effect */
+    background-color: #fff2e1; /* Light background for hover effect */
+    border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+
+/* Container Styles */
+.container {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 2em;
+}
+
+.section h2 {
+    color: #a68b6a; /* Dark cream color */
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1em;
+    border: 5px solid #decba4; /* Light cream color border */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #decba4; /* Light cream color */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Link Styles */
+a {
+    color: #a68b6a; /* Dark cream color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff8e1; /* Cream color */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    .section h2 {
+        font-size: 3em;
+    }
+}
+
+/* Map Frame Styles */
+.map-frame {
+    border: 5px solid #a68b6a; /* Frame color */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures the iframe stays within the frame */
+    max-width: 100%; /* Responsive width */
+    margin: 0 auto; /* Center the map */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+}
+/* CSS to Center the Popup */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    text-align: center;
+}
+
+.popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #a68b6a;
+    color: white;
+}
+
+.popup-content button:hover {
+    background-color: #a68b6a;
+}
