@@ -32,17 +32,27 @@ function hideLoadingAnimation() {
     document.getElementById("loading-popup").style.display = "none";
 }
 
-const images = document.querySelectorAll('.gallery img');
-const modal = document.getElementById('galleryModal');
-const modalImg = document.getElementById('modalImg');
+// Get modal and related elements
+const modal = document.getElementById('imageModal');
+const modalImg = document.getElementById('modalImage');
+const closeModal = document.getElementById('closeModal');
 
-images.forEach(image => {
-    image.addEventListener('click', () => {
-        modal.style.display = 'flex';
-        modalImg.src = image.src;
-    });
+// Add event listeners to gallery images
+document.querySelectorAll('.gallery img').forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+  });
 });
 
-modal.addEventListener('click', () => {
+// Close modal when clicking on the close button
+closeModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the image
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
     modal.style.display = 'none';
+  }
 });
