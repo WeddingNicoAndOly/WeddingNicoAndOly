@@ -1,11 +1,11 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather:wght@300&display=swap');
 
 /* Base Styles */
 body {
-    font-family: 'Great Vibes', cursive;
-    background-color: #fff8e1; /* Cream color background */
-    color: #5b5b5b; /* Soft dark color for text */
+    font-family: 'Merriweather', serif;
+    background-color: #fef7e7; /* Soft beige for background */
+    color: #5a3e2b; /* Warm brown for text */
     margin: 0;
     padding: 0;
     font-size: 1.5em;
@@ -29,31 +29,31 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Optional: Add a dark overlay for better text contrast */
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for contrast */
     z-index: -1;
 }
 
 header h1 {
-    font-size: 3em;
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
     margin: 0;
+    color: #ffda77; /* Golden yellow */
 }
-
-
 
 /* Navigation Styles */
 nav {
-    background-color: #decba4; /* Light cream color */
+    background-color: #c0784a; /* Warm orange-brown */
     text-align: center;
     padding: 1em 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border-top: 2px solid #a68b6a; /* Decorative border at the top */
-    border-bottom: 2px solid #a68b6a; /* Decorative border at the bottom */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    border-top: 2px solid #8c5e34;
+    border-bottom: 2px solid #8c5e34;
     margin-bottom: 2em;
 }
 
 nav a {
     margin: 0 1em;
-    color: #5b5b5b; /* Soft dark color for text */
+    color: #fff6e1; /* Light cream */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2em;
@@ -62,16 +62,15 @@ nav a {
 }
 
 nav a:hover {
-    color: #6b4e24; /* Darker shade for hover effect */
-    background-color: #fff2e1; /* Light background for hover effect */
-    border-radius: 5px; /* Rounded corners for hover effect */
+    color: #ffda77; /* Golden yellow */
+    background-color: #7b4b29; /* Deep brown */
+    border-radius: 5px;
 }
-
 
 /* Container Styles */
 .container {
     padding: 2em;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -81,30 +80,49 @@ nav a:hover {
 }
 
 .section h2 {
-    color: #a68b6a; /* Dark cream color */
+    font-family: 'Great Vibes', cursive;
+    color: #b26d44; /* Soft orange-brown */
     font-size: 3.5em;
     margin-bottom: 0.5em;
 }
 
-/* Image Styles */
-img {
+.section p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #5a3e2b; /* Warm brown */
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.gallery img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto 1em;
-    border: 5px solid #decba4; /* Light cream color border */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid #e6b998; /* Light orange border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Footer Styles */
 footer {
-    background-color: #decba4; /* Light cream color */
-    color: #fff; /* White text */
+    background-color: #7b4b29; /* Deep brown */
+    color: #fff6e1; /* Cream text */
     text-align: center;
     padding: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    margin-top: 2em;
 }
 
 footer p {
@@ -114,12 +132,22 @@ footer p {
 
 /* Link Styles */
 a {
-    color: #a68b6a; /* Dark cream color */
+    color: #b26d44; /* Warm orange-brown */
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Map Frame Styles */
+.map-frame {
+    border: 5px solid #b26d44;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Modal Styles */
@@ -136,7 +164,7 @@ a:hover {
 }
 
 .modal-content {
-    background-color: #fff8e1; /* Cream color */
+    background-color: #fff8e1;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -146,7 +174,7 @@ a:hover {
 }
 
 .close-button {
-    color: #aaa;
+    color: #b26d44;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -154,7 +182,7 @@ a:hover {
 
 .close-button:hover,
 .close-button:focus {
-    color: black;
+    color: #8c5e34;
     text-decoration: none;
     cursor: pointer;
 }
@@ -162,7 +190,7 @@ a:hover {
 /* Responsive Styles */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     nav a {
@@ -171,54 +199,10 @@ a:hover {
     }
 
     .section h2 {
-        font-size: 3em;
+        font-size: 2.5em;
     }
-}
 
-/* Map Frame Styles */
-.map-frame {
-    border: 5px solid #a68b6a; /* Frame color */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensures the iframe stays within the frame */
-    max-width: 100%; /* Responsive width */
-    margin: 0 auto; /* Center the map */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-}
-/* CSS to Center the Popup */
-.popup {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.popup-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fefefe;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 30%;
-    text-align: center;
-}
-
-.popup-content button {
-    margin: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #a68b6a;
-    color: white;
-}
-
-.popup-content button:hover {
-    background-color: #a68b6a;
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
