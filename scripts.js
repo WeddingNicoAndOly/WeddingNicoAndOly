@@ -31,3 +31,18 @@ function hideLoadingAnimation() {
     // Hide the pop-up
     document.getElementById("loading-popup").style.display = "none";
 }
+
+const images = document.querySelectorAll('.gallery img');
+const modal = document.getElementById('galleryModal');
+const modalImg = document.getElementById('modalImg');
+
+images.forEach(image => {
+    image.addEventListener('click', () => {
+        modal.style.display = 'flex';
+        modalImg.src = image.src;
+    });
+});
+
+modal.addEventListener('click', () => {
+    modal.style.display = 'none';
+});
