@@ -117,7 +117,6 @@ nav a:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Modal for Gallery */
 .modal {
     display: none;
     position: fixed;
@@ -138,6 +137,22 @@ nav a:hover {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
 
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal .close:hover {
+    color: #e6a35c;
+}
+
+
 /* Footer Styles */
 footer {
     background-color: #7b4b29; /* Deep brown */
@@ -150,6 +165,27 @@ footer {
 footer p {
     margin: 0;
     font-size: 0.9em;
+}
+
+.story-photo {
+    width: 60%; /* Riduci la dimensione */
+    display: block;
+    margin: 1em auto; /* Centra la foto */
+}
+
+.inline-photo {
+    width: 30%; /* Dimensioni ridotte */
+    float: left; /* Posiziona accanto al testo */
+    margin: 0 1em 1em 0;
+    border-radius: 5px;
+}
+
+a {
+    color: #b26d44; /* Arancio bruciato */
+    text-decoration: underline;
+}
+a:hover {
+    color: #e6a35c; /* Oro autunnale */
 }
 
 /* Responsive Styles */
