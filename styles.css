@@ -180,6 +180,13 @@ footer p {
     border-radius: 5px;
 }
 
+
+.save-photo {
+    width: 30%; /* Dimensioni ridotte */
+    margin: 0 1em 1em 0;
+    border-radius: 5px;
+}
+
 a {
     color: #b26d44; /* Arancio bruciato */
     text-decoration: underline;
