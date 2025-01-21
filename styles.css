@@ -182,8 +182,8 @@ footer p {
 
 
 .save-photo {
-    width: 30%; /* Dimensioni ridotte */
-    height:  30%;
+    width: 60%; /* Dimensioni ridotte */
+    height:  60%;
     margin: 0 1em 1em 0;
     border-radius: 5px;
 }
