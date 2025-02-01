@@ -215,3 +215,7 @@ a:hover {
         grid-template-columns: 1fr;
     }
 }
+
+.storia p {
+    text-align: justify;
+}
