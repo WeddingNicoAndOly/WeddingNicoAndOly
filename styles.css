@@ -10,6 +10,9 @@ body {
     padding: 0;
     font-size: 1.5em;
 }
+h2 {
+    text-align: center;
+}
 
 /* Header Styles with Background Image */
 header {
